@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+    <script src="../lib/ccv.js"></script>
+    <script src="../lib/cascade.js"></script>
+    <script src="../lib/face.js"></script>
+    <script src="../lib/face.jquery.js"></script>
+    <script src="../lib/app.js"></script>
+    <script>
+        $(function() {
+            $('#detect').click(function() {
+                var button = $(this);
+                var coords = $('img').faceDetection();
+            });
+            $('#track').click(function() {
+                var button = $(this);
+                var coords = $('video').faceDetection();
+            });
+            return false;
+        });
+    </script>
+</head>
+<body>
+<div id="content">
+    <img src="../samples/image1.jpg" id="picture"/>
+    <video id="video" width="320" controls="true">
+        <source src="../samples/video.ogv">
+    </video>
+</div>
+    <a href="#" id="detect">Detect</a>
+    <a href="#" id="track">Track</a>
+</body>
+</html>
