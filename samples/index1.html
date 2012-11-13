@@ -10,11 +10,11 @@
         $(function() {
             $('#detect').click(function() {
                 var button = $(this);
-                var coords = $('img').faceDetection();
+                var coords = $('img').face().detect();
             });
             $('#track').click(function() {
                 var button = $(this);
-                var coords = $('video').faceDetection();
+                var coords = $('video').ace().track();
             });
             return false;
         });
