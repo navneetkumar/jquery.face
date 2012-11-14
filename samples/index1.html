@@ -9,12 +9,10 @@
     <script>
         $(function() {
             $('#detect').click(function() {
-                var button = $(this);
                 var coords = $('img').face().detect();
             });
             $('#track').click(function() {
-                var button = $(this);
-                var coords = $('video').ace().track();
+                var coords = $('video').face().track();
             });
             return false;
         });
