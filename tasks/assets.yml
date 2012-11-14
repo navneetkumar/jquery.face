@@ -1,0 +1,5 @@
+src_files:
+  - lib/cascade.js
+  - lib/ccv.js
+  - lib/face.js
+  - lib/face.jquery.js
