@@ -1,46 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- Adapted to work with the getUserMedia API using code from http://wesbos.com/html5-video-face-detection-canvas-javascript/ -->
-	<head>
-		<meta charset="utf-8">
-		<title>HTML5 Face Detection - JavaScript getUserMedia API and Groucho Marx glasses!</title>
-		<style>
-body {
-	font-family: sans-serif;
-	font-size: 17px;
-	line-height: 24px;
-	color: #fff;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	text-align: center;
-	background-color: #111;
-}
-
-#info {
-	position: absolute;
-	width: 100%;
-	height: 30px;
-	top: 50%;
-	margin-top: -15px;
-}
-
-#output {
-	width: auto;
-	height: 100%;
-	background: black;
-	-webkit-transform: scale(-1, 1);
-}
-		</style>
-	</head>
-	<body>
-		<p id="info">Please allow access to your camera!</p>
-		<canvas id="output"></canvas>
-		<script src="../lib/ccv.js"></script>
-		<script src="../lib/cascade.js"></script>
-		<script src="../lib/app.js"></script>
-		<script>
-            App.init();
-		</script>
-	</body>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+    <script src="../lib/ccv.js"></script>
+    <script src="../lib/cascade.js"></script>
+    <script src="../lib/face.js"></script>
+    <script src="../lib/face.jquery.js"></script>
+    <script src="../samples/app.js"></script>
+</head>
+<body>
+<div id="content">
+    <img src="../samples/image1.jpg" id="picture"/>
+    <video id="sample-video" width="320" controls="true">
+        <source src="../samples/video.ogv">
+    </video>
+    <video id="camera-video" controls="false"></video>
+</div>
+    <a href="#" id="detect">Detect</a>
+    <a href="#" id="track">Track</a>
+    <a href="#" id="camera"> Track in Camera</a>
+</body>
 </html>
